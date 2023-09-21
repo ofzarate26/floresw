@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+h1 {
+  font-family: 'Mooli', sans-serif;
+  text-align: center;
+  margin-bottom: 100px;
+  font-size: 40px;
+  color: white;
+}
+
+.flower {
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  animation: pulseFlower 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.flower:hover,
+.flower:focus {
+  transform: rotate(10deg);
+}
+
+.mid {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #000, #ff5e00, #000);
+
+  z-index: 4;
+
+  background-size: 5px 5px;
+
+  filter: drop-shadow(0 0 8px #682600);
+}
+
+.Petal1 {
+  position: absolute;
+  left: 40px;
+  z-index: 3;
+
+  width: 120px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #ff5e00, #ffbb00);
+
+  filter: drop-shadow(0 0 5px #e05200);
+
+}
+
+.Petal1.p1 {
+  transform: rotate(22.5deg);
+}
+
+.Petal1.p2 {
+  transform: rotate(67.5deg);
+}
+
+.Petal1.p3 {
+  transform: rotate(110.5deg);
+}
+
+.Petal1.p4 {
+  transform: rotate(157.5deg);
+}
+
+.Petal2 {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+
+  width: 200px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #ff5e00, #fbd702);
+
+  filter: drop-shadow(0 0 5px #e05200);
+}
+
+.Petal2.p1 {}
+
+.Petal2.p2 {
+  transform: rotate(90deg);
+}
+
+.Petal2.p3 {
+  transform: rotate(45deg);
+}
+
+.Petal2.p4 {
+  transform: rotate(135deg);
+}
+
+.Petal3 {
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+
+  width: 200px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #ff5e00, #fbd702);
+
+  filter: drop-shadow(0 0 2px #fbd702);
+}
+
+.Petal3.p1 {
+  transform: rotate(22.5deg);
+}
+
+.Petal3.p2 {
+  transform: rotate(67.5deg);
+}
+
+.Petal3.p3 {
+  transform: rotate(110.5deg);
+}
+
+.Petal3.p4 {
+  transform: rotate(157.5deg);
+}
+
+.flower-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  animation: pulse 8s infinite;
+}
+
+.leaf-left {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+
+  width: 100px;
+  height: 20px;
+  border-radius: 50%;
+  transform: rotate(30deg);
+
+
+  background: radial-gradient(circle, #9dff00, #01b80d);
+  filter: drop-shadow(0 0 5px #01b80d);
+
+}
+
+.leaf-right {
+  position: absolute;
+  right: 0;
+  z-index: 0;
+
+  width: 100px;
+  height: 20px;
+  border-radius: 50%;
+  transform: rotate(150deg);
+
+  background: radial-gradient(circle, #9dff00, #01b80d);
+  filter: drop-shadow(0 0 5px #01b80d);
+
+}
+
+.stem {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: 0;
+
+  width: 10px;
+  height: 300px;
+  transform: translateX(-50%);
+
+  background: radial-gradient(circle, #9dff00, #01b80d);
+
+  filter: drop-shadow(0 0 5px #01b80d);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseFlower {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    /* Tamaño original y rotación original */
+  }
+
+  50% {
+    transform: scale(1.1) rotate(5deg);
+    /* Tamaño aumentado y rotación de 5 grados */
+  }
+}
+
+@keyframes pulseFlowerInner {
+
+  0%,
+  100% {
+    transform: scale(1)
+      /* Tamaño original y rotación original */
+  }
+
+  50% {
+    transform: scale(1.2)
+      /* Tamaño aumentado y rotación de 5 grados */
+  }
+}
