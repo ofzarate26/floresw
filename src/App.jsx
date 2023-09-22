@@ -23,7 +23,7 @@ function App() {
   return (
     <>
       {
-        name && <h1>Flores amarillas para mi novia {name}</h1>
+        name && <h1>Feliz Cumpleaños {name}</h1>
       }
 
       <div className="flower">
