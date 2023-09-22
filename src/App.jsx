@@ -13,7 +13,7 @@ function App() {
   const [name, setName] = useState("");
 
   useEffect(() => {
-    const name = getQueryParamValue("novia");
+    const name = getQueryParamValue("Cumpleaños");
     if (name) {
       document.title = `Flores para ${name}`;
       setName(name);
